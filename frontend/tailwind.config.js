@@ -7,10 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'fisio-primary': '#078853',
-        'fisio-secondary': '#89C6AD',
-        'fisio-tertiary': '#B5DBCC',
-        'fisio-background': '#F0F7F4',
+        physio: {
+          dark: '#078853',
+          medium: '#89C6AD',
+          soft: '#B5DBCC',
+          bg: '#F0F7F4'
+        }
       }
     },
   },
