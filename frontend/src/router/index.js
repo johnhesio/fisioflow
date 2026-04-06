@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Dashboard from '../adapters/ui/views/Dashboard.vue';
+import Patients from '../adapters/ui/views/Patients.vue'; // Importe a nova view
 
-// Se ainda não criou a view de pacientes, aponte para o Dashboard temporariamente
 const routes = [
   { path: '/', component: Dashboard },
-  { path: '/patients', component: Dashboard }, 
+  { path: '/patients', component: Patients }, // Rota de pacientes atualizada
 ];
 
 const router = createRouter({

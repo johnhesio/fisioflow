@@ -3,15 +3,14 @@ export class PatientUseCase {
     this.repository = patientRepository;
   }
 
-  async getAllPatients() {
+  async listAll() {
     return await this.repository.findAll();
   }
 
-  async createPatient(patientData) {
+  async register(patientData) {
+    if (!patientData.name || !patientData.phone) {
+      throw new Error("Nome e telefone são obrigatórios");
+    }
     return await this.repository.save(patientData);
-  }
-
-  async findPatientById(id) {
-    return await this.repository.findById(id);
   }
 }

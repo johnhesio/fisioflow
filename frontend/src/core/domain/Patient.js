@@ -6,6 +6,6 @@ export class Patient {
     this.email = email;
     this.birthDate = birthDate;
     this.complaint = complaint;
-    this.history = []; // Lista de atendimentos concluídos
+    this.createdAt = new Date().toISOString();
   }
 }
